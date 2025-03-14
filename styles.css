@@ -489,6 +489,7 @@
     min-width: 320px;
     flex: 0 0 auto;
     scroll-snap-align: start;
+    width: 95vw;
   }
   
   .testimonial-header {
@@ -1107,10 +1108,43 @@
   
   @media (max-width: 768px) {
     .main-nav,
-    .auth-buttons {
-      display: none;
+    .auth-buttons{
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: rgb(0 0 0 / 60%);
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 0;
+      clip-path: circle(0% at 100% 0);
+      transition: all 0.3s ease;
     }
-  
+    .main-nav ul li a{
+      color: white;
+    }
+    .main-nav.active {
+      clip-path: circle(141.4% at 100% 0);
+    }
+    .main-nav ul li a.active::after{
+      background-color: transparent
+    }
+    .main-nav ul li a:hover {
+      color: #faae2399;
+  }
+    .main-nav ul{
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      justify-content: center;
+      align-items: flex-start;
+      font-size: larger;
+    }
+    .main-nav ul li a.active {
+      color: white;
+    }
     .mobile-menu-btn {
       display: block;
     }
