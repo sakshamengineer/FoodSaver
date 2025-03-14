@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Dashboard | FoodSaver</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+<body class="dashboard-page">
+  <header class="dashboard-header">
+    <div class="container header-container">
+      <div class="logo">
+        <img src="https://play-lh.googleusercontent.com/SL13-2Hgykln-9VUMDXQDDqUffNKne2hFTCZums1yqt7A7IdnxosUf0CfkqCAMmxUaM=w600-h300-pc0xffffff-pd" alt="" class="logo-icon" />
+        <h1>FoodSaver</h1>
+      </div>
+      <div class="dashboard-actions">
+        <div class="dashboard-user">
+          <img src="/placeholder.svg?height=40&width=40" alt="Restaurant profile" class="user-avatar">
+          <span class="restaurant-name">Pasta Paradise</span>
+        </div>
+        <a href="#" id="logout-btn" class="btn btn-outline btn-small">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="dashboard-container">
+    <aside class="dashboard-sidebar">
+      <nav class="dashboard-nav">
+        <ul>
+          <li><a href="#" class="active">Dashboard</a></li>
+          <li><a href="#">Manage Deals</a></li>
+          <li><a href="#">Orders</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Profile</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="dashboard-main">
+      <div class="dashboard-header-section">
+        <h2>Restaurant Dashboard</h2>
+        <p class="dashboard-welcome">Welcome back, Pasta Paradise!</p>
+      </div>
+
+      <div class="dashboard-summary">
+        <div class="summary-card">
+          <h3>Active Deals</h3>
+          <p class="summary-number">12</p>
+        </div>
+        <div class="summary-card">
+          <h3>Orders Today</h3>
+          <p class="summary-number">28</p>
+        </div>
+        <div class="summary-card">
+          <h3>Revenue This Week</h3>
+          <p class="summary-number">$742</p>
+        </div>
+        <div class="summary-card">
+          <h3>Food Saved (kg)</h3>
+          <p class="summary-number">52</p>
+        </div>
+      </div>
+
+      <div class="dashboard-section">
+        <div class="section-header">
+          <h3>Quick Actions</h3>
+        </div>
+        <div class="quick-actions">
+          <a href="#" class="action-card" id="create-deal">
+            <div class="action-icon">+</div>
+            <h4>Create New Deal</h4>
+          </a>
+          <a href="#" class="action-card">
+            <div class="action-icon">✓</div>
+            <h4>View Pending Orders</h4>
+          </a>
+          <a href="#" class="action-card">
+            <div class="action-icon">↑</div>
+            <h4>Update Availability</h4>
+          </a>
+          <a href="#" class="action-card">
+            <div class="action-icon">$</div>
+            <h4>View Earnings</h4>
+          </a>
+        </div>
+      </div>
+
+      <div class="dashboard-section">
+        <div class="section-header">
+          <h3>Today's Orders</h3>
+          <a href="#" class="btn btn-text">View All</a>
+        </div>
+        <table class="dashboard-table">
+          <thead>
+            <tr>
+              <th>Order #</th>
+              <th>Customer</th>
+              <th>Items</th>
+              <th>Pickup Time</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="orders-table">
+            <!-- Orders will be loaded dynamically -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="dashboard-section">
+        <div class="section-header">
+          <h3>Active Deals</h3>
+          <a href="#" class="btn btn-text">Manage All Deals</a>
+        </div>
+        <div class="active-deals" id="active-deals">
+          <!-- Deals will be loaded dynamically -->
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- New Deal Modal -->
+  <div class="modal" id="new-deal-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Add New Deal</h2>
+      <form id="new-deal-form">
+        <div class="form-group">
+          <label for="deal-title">Title</label>
+          <input type="text" id="deal-title" name="title" required placeholder="e.g., Pasta Box">
+        </div>
+        <div class="form-group">
+          <label for="deal-description">Description</label>
+          <textarea id="deal-description" name="description" required placeholder="Describe the food you're offering"></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="deal-original-price">Original Price ($)</label>
+            <input type="number" id="deal-original-price" name="originalPrice" required step="0.01" min="0">
+          </div>
+          <div class="form-group">
+            <label for="deal-price">Discount Price ($)</label>
+            <input type="number" id="deal-price" name="price" required step="0.01" min="0">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="deal-quantity">Quantity Available</label>
+            <input type="number" id="deal-quantity" name="quantity" required min="1">
+          </div>
+          <div class="form-group">
+            <label for="deal-category">Category</label>
+            <select id="deal-category" name="category" required>
+              <option value="">Select category</option>
+              <option value="meal">Full Meal</option>
+              <option value="appetizer">Appetizer</option>
+              <option value="dessert">Dessert</option>
+              <option value="drink">Drink</option>
+              <option value="bakery">Bakery</option>
+              <option value="mixed">Mixed Bag</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="deal-pickup-start">Pickup Start Time</label>
+            <input type="time" id="deal-pickup-start" name="pickupStart" required>
+          </div>
+          <div class="form-group">
+            <label for="deal-pickup-end">Pickup End Time</label>
+            <input type="time" id="deal-pickup-end" name="pickupEnd" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="deal-image">Upload Image (Optional)</label>
+          <input type="file" id="deal-image" name="image" accept="image/*">
+        </div>
+        <div class="form-group">
+          <label for="deal-allergens">Allergens (select all that apply)</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label"><input type="checkbox" name="allergens" value="gluten"> Gluten</label>
+            <label class="checkbox-label"><input type="checkbox" name="allergens" value="dairy"> Dairy</label>
+            <label class="checkbox-label"><input type="checkbox" name="allergens" value="nuts"> Nuts</label>
+            <label class="checkbox-label"><input type="checkbox" name="allergens" value="soy"> Soy</label>
+            <label class="checkbox-label"><input type="checkbox" name="allergens" value="shellfish"> Shellfish</label>
+            <label class="checkbox-label"><input type="checkbox" name="allergens" value="eggs"> Eggs</label>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-outline" id="cancel-deal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Create Deal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="allfiles/app.js"></script>
+  <script src="allfiles/restaurant-dashboard.js"></script>
+</body>
+</html>
+

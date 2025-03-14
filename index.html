@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodSaver - Reduce Food Waste, Save Money</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-container">
+      <div class="logo">
+        <img src="https://play-lh.googleusercontent.com/SL13-2Hgykln-9VUMDXQDDqUffNKne2hFTCZums1yqt7A7IdnxosUf0CfkqCAMmxUaM=w600-h300-pc0xffffff-pd" alt="" class="logo-icon" />
+        <h1>FoodSaver</h1>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="browse.html">Find Food</a></li>
+          <li><a href="index.html#how-it-works1">How It Works</a></li>
+          <li><a href="index.html#foot">About</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="login.html" class="btn btn-outline">Log In</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+      </div>
+      <button class="mobile-menu-btn">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Fight Food Waste, One Meal at a Time</h2>
+          <p>Connect with local restaurants selling surplus food at discounted prices. Save money while helping the planet.</p>
+          <div class="hero-cta">
+            <a href="browse.html" class="btn btn-primary btn-large">Find Deals Near You</a>
+            <a href="login.html" id = "change" class="btn btn-secondary btn-large">Restaurant? Join Us</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://cdn.create.vista.com/downloads/dfc074cc-c1e6-4ae2-99f8-e229389bffce_640.jpeg" alt="Delicious food at discount prices" />
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container">
+        <div class="stat-item">
+          <h3>500+</h3>
+          <p>Partner Restaurants</p>
+        </div>
+        <div class="stat-item">
+          <h3>25,000+</h3>
+          <p>Meals Saved</p>
+        </div>
+        <div class="stat-item">
+          <h3>80 tons</h3>
+          <p>CO2 Reduced</p>
+        </div>
+        <div class="stat-item">
+          <h3>$300,000</h3>
+          <p>Customer Savings</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-deals">
+      <div class="container">
+        <h2 class="section-title">Today's Featured Deals</h2>
+        <div class="deals-grid" id="featured-deals-container">
+          <!-- Deals will be loaded dynamically -->
+          <div class="loading-spinner"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works" id = "how-it-works1">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-icon">1</div>
+            <h3>Browse Deals</h3>
+            <p>Discover discounted food from restaurants in your area.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">2</div>
+            <h3>Reserve & Pay</h3>
+            <p>Pick what you want and pay through our secure platform.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">3</div>
+            <h3>Collect Food</h3>
+            <p>Pick up your food during the specified collection window.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">4</div>
+            <h3>Enjoy & Save</h3>
+            <p>Enjoy great food at a discount while reducing waste!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">What People Say</h2>
+        <div class="testimonial-slider" id="testimonial-slider">
+          <!-- Testimonials will be loaded dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to start saving?</h2>
+          <p>Join thousands of users who are fighting food waste while enjoying great meals at amazing prices.</p>
+          <a href="signup.html" class="btn btn-primary btn-large" style="background: rgb(0, 0, 0, 0.3);">Sign Up Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" id = "foot">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>FoodSaver</h3>
+          <p>Reducing food waste, one meal at a time.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">Instagram</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="browse.html">Find Food</a></li>
+            <li><a href="restaurant-signup.html">For Restaurants</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="press.html">Press</a></li>
+            <li><a href="impact.html">Our Impact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 FoodSaver. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="allfiles/app.js"></script>
+  <script src="allfiles/home.js"></script>
+  <!-- <script src="js/login.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Deals | FoodSaver</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-container">
+      <div class="logo">
+        <img src="https://play-lh.googleusercontent.com/SL13-2Hgykln-9VUMDXQDDqUffNKne2hFTCZums1yqt7A7IdnxosUf0CfkqCAMmxUaM=w600-h300-pc0xffffff-pd" alt="" class="logo-icon" />
+        <h1>FoodSaver</h1>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="browse.html" class="active">Find Food</a></li>
+          <li><a href="index.html#how-it-works1">How It Works</a></li>
+          <li><a href="index.html#foot">About</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="login.html" class="btn btn-outline">Log In</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+      </div>
+      <button class="mobile-menu-btn">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="browse-header">
+      <div class="container">
+        <h2>Find Food Deals Near You</h2>
+        <div class="search-bar">
+          <div class="search-input">
+            <input type="text" id="location-input" placeholder="Enter your location">
+            <button class="location-btn" id="use-current-location">
+              Use current location
+            </button>
+          </div>
+          <div class="filter-controls">
+            <select id="cuisine-filter">
+              <option value="">All Cuisines</option>
+              <option value="american">American</option>
+              <option value="chinese">Chinese</option>
+              <option value="indian">Indian</option>
+              <option value="italian">Italian</option>
+              <option value="japanese">Japanese</option>
+              <option value="mexican">Mexican</option>
+              <option value="thai">Thai</option>
+            </select>
+            <select id="price-filter">
+              <option value="">All Prices</option>
+              <option value="under-5">Under $5</option>
+              <option value="5-10">$5 - $10</option>
+              <option value="10-15">$10 - $15</option>
+              <option value="over-15">Over $15</option>
+            </select>
+            <select id="sort-by">
+              <option value="distance">Nearest</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="discount">Biggest Discount</option>
+              <option value="pickup-time">Pickup Time</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="browse-results">
+      <div class="container">
+        <div class="results-grid" id="deals-container">
+          <!-- Deals will be loaded dynamically -->
+          <div class="loading-spinner"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pagination">
+      <div class="container">
+        <button id="load-more" class="btn btn-outline btn-large">Load More</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>FoodSaver</h3>
+          <p>Reducing food waste, one meal at a time.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">Instagram</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="browse.html">Find Food</a></li>
+            <li><a href="restaurant-signup.html">For Restaurants</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="press.html">Press</a></li>
+            <li><a href="impact.html">Our Impact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 FoodSaver. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="allfiles/app.js"></script>
+  <script src="allfiles/browse.js"></script>
+</body>
+</html>

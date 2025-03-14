@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | FoodSaver</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-container">
+      <div class="logo">
+        <img src="https://play-lh.googleusercontent.com/SL13-2Hgykln-9VUMDXQDDqUffNKne2hFTCZums1yqt7A7IdnxosUf0CfkqCAMmxUaM=w600-h300-pc0xffffff-pd" alt="" class="logo-icon" />
+        <h1>FoodSaver</h1>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="browse.html">Find Food</a></li>
+          <li><a href="index.html#how-it-works1">How It Works</a></li>
+          <li><a href="index.html#foot">About</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-btn">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="auth-section">
+      <div class="container">
+        <div class="auth-container">
+          <div class="auth-form-container">
+            <h2>Log In to Your Account</h2>
+            <div class="auth-tabs">
+              <button class="auth-tab active" id="user-tab">User</button>
+              <button class="auth-tab" id="restaurant-tab">Restaurant</button>
+            </div>
+            <form id="login-form" class="auth-form">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
+              </div>
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="remember"> 
+                  <span>Remember me</span>
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">Log In</button>
+              <div class="form-divider">
+                <span>or</span>
+              </div>
+              <div class="social-login">
+                <button type="button" class="btn btn-social btn-google">
+                  Continue with Google
+                </button>
+                <button type="button" class="btn btn-social btn-facebook">
+                  Continue with Facebook
+                </button>
+              </div>
+            </form>
+            <div class="auth-footer">
+              <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+            </div>
+          </div>
+          <div class="auth-image">
+            <img src="https://cdn.unenvironment.org/s3fs-public/2024-03/MicrosoftTeams-image%20%2864%29.png" alt="Food being saved from waste">
+            <div class="auth-image-content">
+              <h3>Join the movement to end food waste</h3>
+              <p>Save money while saving the planet - one meal at a time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>FoodSaver</h3>
+          <p>Reducing food waste, one meal at a time.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">Instagram</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="browse.html">Find Food</a></li>
+            <li><a href="restaurant-signup.html">For Restaurants</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="press.html">Press</a></li>
+            <li><a href="impact.html">Our Impact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 FoodSaver. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="allfiles/app.js"></script>
+  <script src="allfiles/login.js"></script>
+</body>
+</html>
+
